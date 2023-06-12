@@ -11,10 +11,31 @@ const options = {
     },
 };
 
-const collectionResponse = await fetch(
-    `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}`,
-    options,
-).then(response => response.json());
+const url = `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}`
 
-// console.log(typeof(collectionResponse))
-console.log(collectionResponse);
+// const collectionResponse = await fetch(
+//     `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}`,
+//     options,
+// ).then(response => response.json());
+
+async function getTokens(url) {
+    // fetch tokens until no more pages
+    let tokens = [];
+    let nextPage = url;
+
+    while (nextPage) {
+        const response = await fetch(nextPage, options)
+        if (response.ok) {
+            const result = await response.json();
+            const assets = result.assets || [];
+            tokens.push(...assets);
+            nextPage = result.next || null;
+        } else {
+            return null;
+        }
+    }
+    return tokens;
+}
+// todo: define type for token metadata
+
+getTokens(url)
