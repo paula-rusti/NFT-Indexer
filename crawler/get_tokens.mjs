@@ -14,28 +14,34 @@ const options = {
 const url = `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}`
 
 // const collectionResponse = await fetch(
-//     `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}`,
+//     `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}&cursor=LXBrPTMwOTgxNDMzOQ==`,
 //     options,
 // ).then(response => response.json());
+//
+// console.log(collectionResponse);
 
 async function getTokens(url) {
     // fetch tokens until no more pages
     let tokens = [];
     let nextPage = url;
+    let current_url = `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}`
 
     while (nextPage) {
-        const response = await fetch(nextPage, options)
+        if (nextPage !== url) {
+            current_url = `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}&cursor=${nextPage}`
+        }
+        const response = await fetch(current_url, options)
         if (response.ok) {
             const result = await response.json();
             const assets = result.assets || [];
             tokens.push(...assets);
             nextPage = result.next || null;
+            console.log(`nextPage: ${nextPage}`)
         } else {
             return null;
         }
     }
     return tokens;
 }
-// todo: define type for token metadata
 
 getTokens(url)
