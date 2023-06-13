@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import _ from 'lodash';
 
 const apiKey = process.env.OPENSEA_API_KEY;
 const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
@@ -20,6 +21,10 @@ const url = `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLE
 //
 // console.log(collectionResponse);
 
+const pickProperties = (array, props) => {
+    return _.map(array, obj => _.pick(obj, props));
+};
+
 async function getTokens(url) {
     // fetch tokens until no more pages
     let tokens = [];
@@ -34,6 +39,8 @@ async function getTokens(url) {
         if (response.ok) {
             const result = await response.json();
             const assets = result.assets || [];
+            let selectedData = pickProperties(assets, ['id', 'token_id', 'name', 'description'])
+            console.log(selectedData);
             tokens.push(...assets);
             nextPage = result.next || null;
             console.log(`nextPage: ${nextPage}`)
