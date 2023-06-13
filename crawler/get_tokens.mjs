@@ -1,3 +1,4 @@
+import {TokenRepository} from "../repository/TokenRepository.js";
 import fetch from 'node-fetch';
 import _ from 'lodash';
 
@@ -31,6 +32,9 @@ async function getTokens(url) {
     let nextPage = url;
     let current_url = `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}`
 
+    const tokenRepository = new TokenRepository();
+    await tokenRepository.createTableIfNotExists()
+
     while (nextPage) {
         if (nextPage !== url) {
             current_url = `https://api.opensea.io/api/v1/assets?asset_contract_address=${WALLET_ADDRESS}&cursor=${nextPage}`
@@ -39,7 +43,13 @@ async function getTokens(url) {
         if (response.ok) {
             const result = await response.json();
             const assets = result.assets || [];
-            let selectedData = pickProperties(assets, ['id', 'token_id', 'name', 'description'])
+            let selectedData = pickProperties(assets, ['token_id', 'name', 'description'])
+
+            for (const item of selectedData) {
+                await tokenRepository.insertToken(item);
+
+            }
+
             console.log(selectedData);
             tokens.push(...assets);
             nextPage = result.next || null;

@@ -25,11 +25,21 @@ class TokenRepository {
             await this.client.schema.createTable('tokens', (table) => {
                 table.increments('id').primary();
                 table.string('token_id').notNullable();
+                table.string('name').notNullable();
+                table.string('description').notNullable();
                 table.timestamp('created_at').defaultTo(this.client.fn.now());
             });
             console.log("Token table created successfully")
         } else {
             console.log("Token table already exists")
+        }
+    }
+
+    async insertToken(token) {
+        try {
+            await this.client('tokens').insert(token);
+        } catch (error) {
+            throw new Error('Error inserting token: ' + error.message);
         }
     }
 }
