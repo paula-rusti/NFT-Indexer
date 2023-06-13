@@ -1,0 +1,250 @@
+{
+  "id": 309814406,
+  "token_id": "4978",
+  "num_sales": 3,
+  "background_color": null,
+  "image_url": "https://i.seadn.io/gae/8MxJFAIkYHCWYdOjeDAs4ytOc0MXrdibJmIlOsYu9MbflUARqRp7mh_w0UemXJyDacwtkwLdTT1C0dRwkIBC6s2XdSqocfRnOZEcoA?w=500&auto=format",
+  "image_preview_url": "https://i.seadn.io/gae/8MxJFAIkYHCWYdOjeDAs4ytOc0MXrdibJmIlOsYu9MbflUARqRp7mh_w0UemXJyDacwtkwLdTT1C0dRwkIBC6s2XdSqocfRnOZEcoA?w=500&auto=format",
+  "image_thumbnail_url": "https://i.seadn.io/gae/8MxJFAIkYHCWYdOjeDAs4ytOc0MXrdibJmIlOsYu9MbflUARqRp7mh_w0UemXJyDacwtkwLdTT1C0dRwkIBC6s2XdSqocfRnOZEcoA?w=500&auto=format",
+  "image_original_url": "https://contracts.sandbox.game/snoopdogg/4978.jpg",
+  "animation_url": "https://www.sandbox.game/model-viewer-light/?assetId=d259dc17-b509-43ab-84e2-6fb085908953",
+  "animation_original_url": "https://www.sandbox.game/model-viewer-light/?assetId=d259dc17-b509-43ab-84e2-6fb085908953",
+  "name": "Doggy #4978",
+  "description": "**Doggy #4978**\n\nHigh-flying, dapper Super Snoop. 'Makes you feel the way you need to feel'.\n\n⚡️ Learn more about The Sandbox and create your account today: [https://www.sandbox.game](https://www.sandbox.game) ⚡️",
+  "external_link": "https://www.sandbox.game/en/model-viewer/d259dc17-b509-43ab-84e2-6fb085908953",
+  "asset_contract": {
+    "address": "0xc7df86762ba83f2a6197e1ff9bb40ae0f696b9e6",
+    "asset_contract_type": "non-fungible",
+    "chain_identifier": "ethereum",
+    "created_date": "2022-02-17T15:48:44.822206",
+    "name": "The Doggies",
+    "nft_version": null,
+    "opensea_version": null,
+    "owner": 1964870,
+    "schema_name": "ERC721",
+    "symbol": "TD",
+    "total_supply": "10000",
+    "description": "🐶 The Doggies - Snoop Dogg Avatars  🐶\r\n\r\n10,000 metaverse-ready Avatars, playable in The Sandbox. Each Doggy has been generated from over 150+ traits, curated by Snoop Dogg himself. Owning a Doggy provides access to a playable The Sandbox avatar, as well as access to future features inside the metaverse.",
+    "external_link": "https://www.sandbox.game/en/snoopdogg/",
+    "image_url": "https://i.seadn.io/gae/ufumJQN9NwT0U5jh_suJP5cLRIjyE38hirVdBChQLe-ghnt1RomIARfxSNmR6fdMQC0OIgjVQHhhduUfcxiRVrfHpihrXSW-SU5J?w=500&auto=format",
+    "default_to_fiat": false,
+    "dev_buyer_fee_basis_points": 0,
+    "dev_seller_fee_basis_points": 500,
+    "only_proxied_transfers": false,
+    "opensea_buyer_fee_basis_points": 0,
+    "opensea_seller_fee_basis_points": 250,
+    "buyer_fee_basis_points": 0,
+    "seller_fee_basis_points": 750,
+    "payout_address": "0x4489590a116618b506f0efe885432f6a8ed998e9"
+  },
+  "permalink": "https://opensea.io/assets/ethereum/0xc7df86762ba83f2a6197e1ff9bb40ae0f696b9e6/4978",
+  "collection": {
+    "banner_image_url": "https://i.seadn.io/gae/t0HgfMu9HqDLG4XX1CCcc2VswpySc_zN1fulCZeLzLO2sytC_3bUNpqOPLU8AcArS69ElEqOkQA_cnsGeqN_Sr9ixggtTw1aOo5oOQ?w=500&auto=format",
+    "chat_url": null,
+    "created_date": "2022-02-18T20:30:41.677780+00:00",
+    "default_to_fiat": false,
+    "description": "🐶 The Doggies - Snoop Dogg Avatars  🐶\r\n\r\n10,000 metaverse-ready Avatars, playable in The Sandbox. Each Doggy has been generated from over 150+ traits, curated by Snoop Dogg himself. Owning a Doggy provides access to a playable The Sandbox avatar, as well as access to future features inside the metaverse.",
+    "dev_buyer_fee_basis_points": "0",
+    "dev_seller_fee_basis_points": "500",
+    "discord_url": "https://discord.gg/vAe4zvY",
+    "display_data": {
+      "card_display_style": "cover"
+    },
+    "external_url": "https://www.sandbox.game/en/snoopdogg/",
+    "featured": false,
+    "featured_image_url": "https://i.seadn.io/gae/wvqBWnsjATeAxPjIGHGjgb5FxrRWPKapA-74rzjAtkIHuE32mM3l1HahOdB_Ue0qZuy2ur0wDoBFiq3GFx9T-ldNfQXIqQG88HUBCA?w=500&auto=format",
+    "hidden": false,
+    "safelist_request_status": "verified",
+    "image_url": "https://i.seadn.io/gae/ufumJQN9NwT0U5jh_suJP5cLRIjyE38hirVdBChQLe-ghnt1RomIARfxSNmR6fdMQC0OIgjVQHhhduUfcxiRVrfHpihrXSW-SU5J?w=500&auto=format",
+    "is_subject_to_whitelist": false,
+    "large_image_url": "https://i.seadn.io/gae/wvqBWnsjATeAxPjIGHGjgb5FxrRWPKapA-74rzjAtkIHuE32mM3l1HahOdB_Ue0qZuy2ur0wDoBFiq3GFx9T-ldNfQXIqQG88HUBCA?w=500&auto=format",
+    "medium_username": null,
+    "name": "The Doggies (Snoop Dogg)",
+    "only_proxied_transfers": false,
+    "opensea_buyer_fee_basis_points": "0",
+    "opensea_seller_fee_basis_points": 250,
+    "payout_address": "0x4489590a116618b506f0efe885432f6a8ed998e9",
+    "require_email": false,
+    "short_description": null,
+    "slug": "snoop-dogg-doggies",
+    "telegram_url": null,
+    "twitter_username": "TheSnoopAvatars",
+    "instagram_username": null,
+    "wiki_url": null,
+    "is_nsfw": false,
+    "fees": {
+      "seller_fees": {
+        "0x4489590a116618b506f0efe885432f6a8ed998e9": 500
+      },
+      "opensea_fees": {
+        "0x0000a26b00c1f0df003000390027140000faa719": 250
+      }
+    },
+    "is_rarity_enabled": true,
+    "is_creator_fees_enforced": false
+  },
+  "decimals": 0,
+  "token_metadata": "https://contracts.sandbox.game/snoopdogg/4978",
+  "is_nsfw": false,
+  "owner": null,
+  "seaport_sell_orders": null,
+  "creator": {
+    "user": {
+      "username": "TheSandboxCollections"
+    },
+    "address": "0xeaa0993e1d21c2103e4f172a20d29371fbaf6d06",
+    "config": "verified",
+    "profile_img_url": ""
+  },
+  "traits": [
+    {
+      "trait_type": "Upper Body Clothing",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 923,
+      "order": null,
+      "value": "Pink Suit"
+    },
+    {
+      "trait_type": "Head",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 9533,
+      "order": null,
+      "value": "Human"
+    },
+    {
+      "trait_type": "Pants",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 770,
+      "order": null,
+      "value": "Deep Blue Knee Patches Jeans"
+    },
+    {
+      "trait_type": "Shoes",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 901,
+      "order": null,
+      "value": "Dark Grey Shoes"
+    },
+    {
+      "trait_type": "Body Accessory",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 540,
+      "order": null,
+      "value": "Short Silver Pendant Chain"
+    },
+    {
+      "trait_type": "Eyes",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 295,
+      "order": null,
+      "value": "Eye Patch Left Eye"
+    },
+    {
+      "trait_type": "Type",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 1113,
+      "order": null,
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Mouth",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 1060,
+      "order": null,
+      "value": "Bearded Smile"
+    },
+    {
+      "trait_type": "Mouth Accessory",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 485,
+      "order": null,
+      "value": "Joint"
+    },
+    {
+      "trait_type": "Hair",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 559,
+      "order": null,
+      "value": "Accent Coloured Hair"
+    },
+    {
+      "trait_type": "Hat",
+      "display_type": null,
+      "max_value": null,
+      "trait_count": 167,
+      "order": null,
+      "value": "Aviator Glasses on a Hat"
+    }
+  ],
+  "last_sale": {
+    "asset": {
+      "token_id": "4978",
+      "decimals": 0
+    },
+    "asset_bundle": null,
+    "event_type": "successful",
+    "event_timestamp": "2022-12-08T05:57:59",
+    "auction_type": null,
+    "total_price": "78000000000000000",
+    "payment_token": {
+      "symbol": "ETH",
+      "address": "0x0000000000000000000000000000000000000000",
+      "image_url": "https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg",
+      "name": "Ether",
+      "decimals": 18,
+      "eth_price": "1.000000000000000",
+      "usd_price": "1735.990000000000009000"
+    },
+    "transaction": {
+      "block_hash": "0x2eb98cda0db4f307335987ed2d7ec5501d5541334e8e6655219a646e66730e24",
+      "block_number": "16138051",
+      "from_account": {
+        "user": {
+          "username": "MW_0926"
+        },
+        "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/30.png",
+        "address": "0x75f914eef3cb5ea4a2de9837f51889f488457ca4",
+        "config": ""
+      },
+      "id": 846555344,
+      "timestamp": "2022-12-08T05:57:59",
+      "to_account": {
+        "user": null,
+        "profile_img_url": "https://storage.googleapis.com/opensea-static/opensea-profile/11.png",
+        "address": "0x00000000006c3852cbef3e08e8df289169ede581",
+        "config": ""
+      },
+      "transaction_hash": "0x250e9c160314e42d4c44cf364b2576b3c77d9d7345dd12f5ce29addc6e5d3e2e",
+      "transaction_index": "63"
+    },
+    "created_date": "2022-12-08T05:58:01.292658",
+    "quantity": "1"
+  },
+  "top_bid": null,
+  "listing_date": null,
+  "supports_wyvern": true,
+  "rarity_data": {
+    "strategy_id": "openrarity",
+    "strategy_version": "0.7.0b0",
+    "rank": 346,
+    "score": 1.267903502676484,
+    "calculated_at": "2022-11-03T21:30:59.317383",
+    "max_rank": 10000,
+    "tokens_scored": 10000,
+    "ranking_features": {
+      "unique_attribute_count": 0
+    }
+  },
+  "transfer_fee": null,
+  "transfer_fee_payment_token": null
+}
