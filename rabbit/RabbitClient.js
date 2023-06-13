@@ -28,8 +28,14 @@ class RabbitClient {
     }
 
     async sendMessage(queueName, message) {
+        // message has the following format:
+        // {
+        //     "job_id": "uuid",
+        //     "contract_address": "0x123",
+        //     "token_ids": [1, 2, 3],
+        // }
         try {
-            await this.channel.sendToQueue(queueName, Buffer.from(message));
+            await this.channel.sendToQueue(queueName, Buffer.from(JSON.stringify(message)));
             console.log(`Sent message to queue: ${queueName}`);
         } catch (error) {
             console.error(`Failed to send message to queue: ${queueName}`, error);

@@ -21,17 +21,22 @@ module.exports = function (app) {
         console.log("Received request to create crawler job with body: " );
         console.log(req_body);
 
-        const uuid = uuidv4()
-        console.log("Received request to create crawler job with generated id: " + uuid)
+        let message = {
+            "job_id": uuidv4(),
+            "contract_address": req_body.contract_address,
+            "token_ids": req_body.token_ids,
+        }
+
+        console.log("Received request to create crawler job with generated id: " + message.job_id);
     rabbitClient.connect()
         .then(() => {
             rabbitClient.createQueue('jobs_queue');
-            rabbitClient.sendMessage('jobs_queue', 'Crawler job request with id: ' + uuid);
+            rabbitClient.sendMessage('jobs_queue', message);
         });
         // this shall be inside error callback
         // const body = req.body
         // return res.status(404).send(false)
-        return res.status(200).send(req_body)
+        return res.status(200).send(message)
     })
 
     app.get('/crawler/:id', (req, res) => {
