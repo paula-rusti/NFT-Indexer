@@ -71,6 +71,7 @@ async function getTokenData(contractId, tokenId) {
     ).then(response => response.json());
     let selectedData = _.pick(response, 'token_id', 'name', 'description', 'asset_contract.address')
     console.log(selectedData)
+    return selectedData
 }
 
 // getTokens(url)
