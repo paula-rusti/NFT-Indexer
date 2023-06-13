@@ -1,10 +1,9 @@
 const {fork} = require('child_process');
 const fs = require('fs');
-const {TokenRepository} = require("../repository/TokenRepository");
 
 const logFile = './crawler_logs.txt';
 
-
+// here read from the jobs_queue to start the crawling job
 class Crawler {
     constructor(job_id) {
         this.job_id = job_id;
