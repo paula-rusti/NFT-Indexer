@@ -19,6 +19,7 @@ class TokenRepository {
         return this.instance;
     }
 
+    // todo add contract address to token table
     async createTableIfNotExists() {
         const tableExists = await this.client.schema.hasTable('tokens');
         if (!tableExists) {

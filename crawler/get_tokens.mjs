@@ -61,4 +61,17 @@ async function getTokens(url) {
     return tokens;
 }
 
-getTokens(url)
+async function getTokenData(contractId, tokenId) {
+    // contractId = '0xc7df86762ba83f2a6197e1ff9bb40ae0f696b9e6'
+    // tokenId = '8652'
+    const url = `https://api.opensea.io/api/v1/asset/${contractId}/${tokenId}`
+    const response = await fetch(
+    url,
+    options,
+    ).then(response => response.json());
+    let selectedData = _.pick(response, 'token_id', 'name', 'description', 'asset_contract.address')
+    console.log(selectedData)
+}
+
+// getTokens(url)
+getTokenData('0xc7df86762ba83f2a6197e1ff9bb40ae0f696b9e6', '8652');
