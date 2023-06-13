@@ -1,5 +1,6 @@
 const {fork} = require('child_process');
 const fs = require('fs');
+const {TokenRepository} = require("../repository/TokenRepository");
 
 const logFile = './crawler_logs.txt';
 
