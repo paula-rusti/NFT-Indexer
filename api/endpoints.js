@@ -1,3 +1,6 @@
+const { v4: uuidv4 } = require('uuid');
+
+
 module.exports = function (app) {
 
     app.get('/:id', (req, res) => {
@@ -9,12 +12,10 @@ module.exports = function (app) {
     })
 
     app.post('/crawler', (req, res) => {
-
-        console.log("Received request to create crawler job")
+        const uuid = uuidv4()
+        console.log("Received request to create crawler job with generated id: " + uuid)
         const body = req.body
-
         return res.status(404).send(false)
-
     })
 
 }

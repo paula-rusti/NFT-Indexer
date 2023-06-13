@@ -18,10 +18,10 @@ class ExpressAPI {
         // Example route with parameters
         const routes = require('./endpoints');
         this.app.use('/users', routes);
+        // todo routes cannot be registered like this
     }
 
     start() {
-        this.setupRoutes();
         this.app.listen(this.port, () => {
             console.log(`ExpressAPI is running on port ${this.port}`);
         });
