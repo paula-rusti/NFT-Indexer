@@ -1,10 +1,12 @@
+const connection_string = "postgresql://nft:nft@localhost:5432/nft"
+
 class JobRepository {
     constructor() {
         // this.client = new DatabaseClient();
         if (!JobRepository.instance) {
             this.client = require('knex')({
                 client: 'pg',
-                connection: process.env.PG_CONNECTION_STRING,
+                connection: connection_string, // process.env.PG_CONNECTION_STRING,
                 searchPath: ['knex', 'public'],
             });
             JobRepository.instance = this;
@@ -24,6 +26,8 @@ class JobRepository {
             await this.client.schema.createTable('jobs', (table) => {
                 table.increments('id').primary();
                 table.string('job_id').notNullable();
+                table.string('target_contract').notNullable();
+                table.integer('num_tokens').notNullable();
                 table.string('status').notNullable();
                 table.timestamp('created_at').defaultTo(this.client.fn.now());
             });
