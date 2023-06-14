@@ -1,3 +1,4 @@
+const connection_string = "postgresql://nft:nft@localhost:5432/nft"
 
 class TokenRepository {
     constructor() {
@@ -5,7 +6,7 @@ class TokenRepository {
         if (!TokenRepository.instance) {
             this.client = require('knex')({
                 client: 'pg',
-                connection: process.env.PG_CONNECTION_STRING,
+                connection: connection_string, // process.env.PG_CONNECTION_STRING,
                 searchPath: ['knex', 'public'],
             });
             TokenRepository.instance = this;
