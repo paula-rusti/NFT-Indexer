@@ -69,6 +69,10 @@ def get_abi(contract_address):
 
 
 if __name__ == '__main__':
+    """
+    the js process will start this script with the args: job_id, contract_address, token_id
+    only the last two are relevant for this script
+    """
     contract_address = '0xc7df86762ba83f2a6197e1ff9bb40ae0f696b9e6'
     metadata = get_token_metadata(contract_address, 6791)
     print(metadata)
