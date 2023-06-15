@@ -1,4 +1,5 @@
 const {fork} = require('child_process');
+const  {spawn} = require('child_process');
 const fs = require('fs');
 
 const logFile = './crawler_logs.txt';
@@ -10,6 +11,8 @@ class Crawler {
         this.contract_address = contract_address;
         this.token_ids = token_ids;
         this.process = fork('./crawler/crawler-child.js', [job_id]);
+        // start a python process also
+        this.pyProcess = spawn('python', ['./real_crawler/python_script.py', job_id, contract_address, token_ids]);
     }
 
 
@@ -21,6 +24,21 @@ class Crawler {
             token_ids: this.token_ids
         });
         console.log(`Sending start action to crawling job: ${this.job_id}`);
+
+        // listen to stdout of the python process
+        let output = '';
+        this.pyProcess.stdout.on('data', (data) => {
+            output += data;
+        });
+
+        // Listen to the close event to know when the Python process has exited
+        this.pyProcess.on('close', (code) => {
+            if (code === 0) {
+                console.log('Received output from Python:', output);
+            } else {
+                console.error('Python process exited with error');
+            }
+        });
     }
 
     stop() {
