@@ -69,3 +69,5 @@ function stopCrawling() {
     // Code to stop the crawling job process
     console.log(`Stopping crawling job: ${process.argv[2]}`);
 }
+
+module.exports.getTokens = getTokens;
